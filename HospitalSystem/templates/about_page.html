@@ -1,1 +1,96 @@
-<h1>About Us</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkiraChix</title>
+</head>
+<style>
+    body{
+        background-image: url("https://i.pinimg.com/564x/f4/2f/fe/f42ffef6454872d53377a63af9d6b945.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+        background-color: transparent;
+      }
+    #logo{
+        width:15%;
+        margin-top:-2%;
+        mix-blend-mode: multiply;
+    }
+    #name{
+        font-size:70%;
+        margin-left:9%;
+        margin-top:-7.8%;
+        color:#29384C;
+    }
+    #name2{
+        font-size:70%;
+        margin-left:15%;
+        margin-top:-3%;
+        color:#53CEC6;
+    }   
+    #name3{
+        font-size:140%;
+        margin-left:6%;
+        margin-top:6%;
+        
+    }  
+    #name3 p{
+    font-size:95%;  
+    } 
+    #photo{
+        width:59%;
+        height:40%;
+        margin-top: -23.5%;
+        margin-left: 31%;
+      }
+      .button {
+        background-color: #53CEC6;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        margin-top:-15%;
+      }
+      .button:hover {
+        background-color:#29384C;
+        color: black;
+        box-shadow: 0 8px 16px 0 white;
+        
+      }
+      #mybutton{
+        margin-top:-5%;
+      }
+   
+</style>
+<body>
+ 
+<div>
+    <img id="logo" src="https://cdn.dribbble.com/users/2185289/screenshots/4787451/11.png">
+ </div>
+ 
+ <div id="name">
+     <h1>Lovable</h1>
+  </div>
+  <div id="name2">
+     <h1>Clinic</h1>
+  </div>
+  <div id="name3">
+    <h1>About Us</h1>
+    <p>Lovable Clinic is a health platform that <br>allows individuals to store their health <br>and medical information,book appointments<br>and get the necessary health at the comfort<br>of their homes.<br>Lovable Clinic is on a mission to revolutionalize<br>African's health. Our mission is to make <br>accessible health a reality to billions of people <br>in emerging markets.</br></br></br></br></br> </br> </p>
+ <div id="photo">
+    <img id="photo"src="https://pumua.health/assets/images/hero/03.png">
+ </div>
+ <div id="mybutton">
+    <a href ="{% url 'home'%}">
+        <button class="button">Back</button>
+ </div>      
+</body>
+</html>
