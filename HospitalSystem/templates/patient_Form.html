@@ -11,6 +11,21 @@
       background-size: cover;
       background-color: transparent;
     }
+    .button2:hover {
+      background-color:#29384C;
+      color: black;
+      box-shadow: 0 8px 16px 0 white;
+      
+    }
+    .button2{
+      margin-top:-50%;
+      background-color: #53CEC6;
+      border: none;
+      color:white;
+      width:13%;
+      height:7vh;
+      margin-left:86%;
+    }
     .button {
       background-color: #53CEC6;
       border: none;
@@ -34,6 +49,9 @@
   <form method="post" novalidate>
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit" class="button">Save patient</button>
+    <a href="{% url 'appointment'%}">
+      <button type="submit" class="button">Save Patient</button>
+    </a>
+
   </form>
 {% endblock %}

@@ -8,5 +8,7 @@ urlpatterns = [
     path("doctorForm",views.doctor_Form,name="doctorForm"),
     path("service",views.service_page,name="service"),
     path("contact",views.contact_page,name="contact"),
+    path("appointment",views.appointment_Form,name="appointment"),
+    path("records",views.records_page,name="records"),
 
 ]

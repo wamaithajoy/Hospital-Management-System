@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'HospitalSystem',
     'crispy_forms',
+    'django_countries',
+
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

@@ -1,4 +1,5 @@
 from django.db import models
+from django_countries.fields import CountryField
 
 # Create your models here.
 
@@ -16,6 +17,7 @@ class Patient(models.Model):
     contact=models.CharField(max_length=15,null=True)
     email=models.EmailField(max_length=45,null=True)
     address=models.CharField(max_length=20,null=True)
+    country = CountryField(blank_label='(select country)',null=True)
     MARITAL_CHOICES=(
         ('Single','Single'),
         ('Married','Married'),
@@ -33,7 +35,8 @@ class Doctor(models.Model):
     last_name=models.CharField(max_length=20,null=True)
     email=models.EmailField(max_length=45,null=True)
     contact=models.CharField(max_length=15,null=True)
-    address=models.TextField(max_length=20,null=True)
+    address=models.CharField(max_length=20,null=True)
+    country = CountryField(blank_label='(select country)',null=True)
     GENDER_CHOICES = (
         ('Male', 'Male'),
         ('Female', 'Female'),
@@ -71,6 +74,37 @@ class Doctor(models.Model):
         ('Remote','Remote'),
     )
     work_type = models.CharField(max_length=20, choices=WORKTYPE_CHOICES,null=True)
+
+class Appointmnet(models.Model):
+    first_name=models.CharField(max_length=20,null=True)
+    last_name=models.CharField(max_length=20,null=True)
+    email=models.EmailField(max_length=45,null=True)
+    contact=models.CharField(max_length=15,null=True)
+    FIRSTVISIT_CHOICES=(
+        ('Yes','Yes'),
+        ('No','No'),
+    )
+    first_time_visit = models.CharField(max_length=20, choices=FIRSTVISIT_CHOICES,null=True)
+    appointment_date=models.DateField(max_length=10,null=True)
+    CONTACTINGTIME_CHOICES=(
+        ('Morning','Morning'),
+        ('Noon','Noon'),
+        ('Afternoon','Afternoon'),
+        ('Evening','Evening'),
+        ('Night','Night'),
+    )
+    contacting_time = models.CharField(max_length=20, choices=CONTACTINGTIME_CHOICES,null=True)
+    CONTACTINGMETHOD_CHOICES=(
+        ('Email','Email'),
+        ('Phone','Phone'),
+    )
+    contacting_method = models.CharField(max_length=20, choices=CONTACTINGMETHOD_CHOICES,null=True)
+    services_interested=models.TextField(max_length=100,null=True)
+
+    
+    
+
+
 
 
 

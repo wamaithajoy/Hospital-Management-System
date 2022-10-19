@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkiraChix</title>
+</head>
+<style>
+    body{
+        background-image: url("https://i.pinimg.com/564x/f4/2f/fe/f42ffef6454872d53377a63af9d6b945.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+        background-color: transparent;
+      }
+      #logo{
+        width:15%;
+        margin-top:-2%;
+        mix-blend-mode: multiply;
+    }
+    #name{
+        font-size:70%;
+        margin-left:9%;
+        margin-top:-7.8%;
+        color:#29384C;
+    }
+    #name2{
+        font-size:70%;
+        margin-left:15%;
+        margin-top:-3%;
+        color:#53CEC6;
+    } 
+    nav{
+      list-style: none;
+      text-decoration: none;
+  }
+    .navbar{
+      margin-top: -3%;
+      margin-right: 8%;
+      font-size:120%;
+      cursor: pointer;
+      margin-left: 58%;
+     
+  }
+  .navbar a{
+    padding: 9px;
+    text-decoration: none;
+    color:black;
+  }
+  .navbar a:hover{
+    background-color: #53CEC6;
+  }
+  .image img{
+    width:27%;
+    height:55vh;
+    margin-left:6%;
+    margin-top:6%;
+    border-radius:15%;
+  }
+  .image2 img{
+    width:27%;
+    height:54vh;
+    margin-left:35%;
+    margin-top:-30%;
+    margin-bottom:5.5%;
+    border-radius:15%;
+  }
+
+  .image3 img{
+    width:27%;
+    height:54vh;
+    margin-left:65%;
+    margin-top:-31%;
+    margin-bottom:12%;
+    border-radius:15%;
+  }
+  .button{
+    margin-left:14%;
+    height:7vh;
+    background-color: #53CEC6;
+    border: none;
+    width:11%;
+    margin-top:1%;
+  }
+  .button1{
+    margin-left:43%;
+    height:7vh;
+    background-color: #53CEC6;
+    border: none;
+    width:11%;
+    margin-top:-10%;
+  }
+
+</style>
+<body>
+  
+<div>
+  <img id="logo" src="https://cdn.dribbble.com/users/2185289/screenshots/4787451/11.png">
+</div>
+
+<div id="name">
+   <h1>Lovable</h1>
+</div>
+<div id="name2">
+   <h1>Clinic</h1>
+</div>
+
+<nav class="navbar">
+  <a href="{%url 'home'%}" >Home</a>
+  <a href="{%url 'about'%}" >About</a>
+  <a href="{%url 'patientForm'%}" >Patient</a>
+  <a href="{%url 'doctorForm'%}" >Doctor</a>
+  <a href="{%url 'service'%}" >Service</a>
+  <a href="{%url 'contact'%}" >Contact</a>
+ </nav>
+
+ <div class="image">
+    <img src="https://media.istockphoto.com/vectors/medical-record-concept-vector-illustration-medical-diagnosis-medical-vector-id1139778389?k=20&m=1139778389&s=612x612&w=0&h=NCJvd_84F11CmD3f_zsacpX7AvpwlyZIuPHXr4XBtXA=" alt="Avatar">
+  </div>
+  <a href= "{% url 'home' %}">
+    <button type="submit" class="button">View Patients</button>
+   </a>
+
+  <div class="image2">
+    <img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=2000" alt="Avatar">
+     <a href= "{% url 'service' %}">
+    <button type="submit" class="button1">View Doctors</button>
+   </a>
+  </div>
+ 
+
+  <div class="image3">
+    <img src="https://img.freepik.com/premium-vector/calendar-deadline-with-list-completed-cases-unfulfilled-flat-design_115464-1028.jpg?w=2000" alt="Avatar">
+  </div>
+
+
+
+
+</body>
+</html>

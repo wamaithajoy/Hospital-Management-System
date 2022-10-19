@@ -8,7 +8,7 @@
 </head>
 <style>
     body{
-        background-image: url("https://thumbs.dreamstime.com/b/male-medicine-doctor-stethoscope-hand-standing-confidently-hospital-background-healthcare-concept-154742388.jpg");
+        background-image: url("https://i.pinimg.com/564x/f4/2f/fe/f42ffef6454872d53377a63af9d6b945.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;
@@ -58,7 +58,109 @@
   }
   .navbar a:hover{
     background-color: #53CEC6;
-}
+  }
+  .heading{
+    margin-left:12%; 
+    margin-top:-28%;
+    font-size:140%;
+  }
+  .image img{
+    width:25%;
+    height:52vh;
+    margin-left:6%; 
+    margin-top:7%;
+    border-radius:15%;
+  }
+  .container{
+    margin-left:6%; 
+    font-size:110%;
+  }
+  .button {
+    background-color: #53CEC6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width:12%;
+    height:7vh;
+    margin-top:22%;
+    margin-left:13%;
+  }
+
+  .heading2{
+    margin-left:41%; 
+    margin-top:-41%;
+    font-size:140%;
+  }
+  .image2 img{
+    width:25%;
+    margin-left:36%; 
+    margin-bottom:13%;
+    margin-top:-27%;
+  }
+  .container2{
+    margin-left:38%; 
+    font-size:110%;
+    margin-top:-13%;
+  }
+  .button1 {
+    background-color: #53CEC6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top:22%;
+    margin-left:43%;
+    width:12%;
+    height:7vh;
+  }
+
+  .image3 img{
+    width:25%;
+    margin-left:67%;
+    margin-top:-35%;
+    margin-bottom:5.5%;
+    border-radius:15%;
+    height:53vh;
+  }
+  .heading3{
+    margin-left:73%;
+    margin-top:-33.5%;
+    font-size:140%;
+  }
+  .button2 {
+    background-color: #53CEC6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top:22%;
+    margin-left:73%;
+    width:12%;
+    height:7vh;
+  }
+  .button2:hover {
+    background-color:#29384C;
+    color: pink;
+    box-shadow: 0 8px 16px 0 white;
+    
+  }
+
     
       
 </style>
@@ -82,8 +184,54 @@
   <a href="{%url 'doctorForm'%}" >Doctor</a>
   <a href="{%url 'service'%}" >Service</a>
   <a href="{%url 'contact'%}" >Contact</a>
+ </nav>
 
-  </nav>
-         
+ <div class="image">
+    <img src="https://www.doctor2u.my/wp-content/uploads/2018/01/D2U_FBCanvas_Live_Chat-1.jpg" alt="Avatar">
+  </div>
+<div class="heading">
+  <h4><b>Talk to a doctor</b></h4> 
+ </div>
+
+
+ <div class="btn1">
+  <a href= "{% url 'home' %}">
+    <button type="submit" class="button">Call Now</button>
+   </a>
+ </div>
+
+
+ <div class="image2">
+  <img src="https://painswickpharmacy.co.uk/wp-content/uploads/2015/05/BookAppointment400.png" alt="Avatar">
+</div>
+<div class="heading2">
+<h4><b>Book an appoinment</b></h4> 
+</div>
+
+
+
+<div class="btn2">
+  <a href= "{% url 'patientForm' %}">
+    <button type="submit" class="button1">Book Now</button>
+   </a>
+ </div>
+
+
+<div class="image3">
+  <img src="https://static.vecteezy.com/system/resources/previews/006/017/847/original/young-girl-with-headset-is-sitting-at-her-computer-and-talking-with-customer-clients-assistance-call-center-hotline-operator-technical-support-and-customer-care-illustration-vector.jpg" alt="Avatar">
+</div>
+<div class="heading3">
+<h4><b>Need any help</b></h4> 
+</div>
+
+
+
+<div class="btn3">
+  <a href= "{% url 'home' %}">
+    <button type="submit" class="button2">Call Now</button>
+   </a>
+ </div>
+
+
 </body>
 </html>

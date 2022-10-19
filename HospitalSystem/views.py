@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from HospitalSystem.forms import DoctorForm, PatientForm
+from HospitalSystem.forms import AppointmentForm, DoctorForm, PatientForm
 
 def home_page(request):
     return render(request,"home_page.html")
@@ -13,7 +13,7 @@ def patient_Form(request):
         form=PatientForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-            return redirect("service")
+            return redirect("appointment")
         else:
             print(form.errors)
     else:
@@ -39,7 +39,25 @@ def doctor_Form(request):
     return render(request,"doctor_Form.html",{"form":form})
 
 def contact_page(request):
-    return render(request,"contact_page.html")       
+    return render(request,"contact_page.html")
+
+
+def appointment_Form(request):
+    if request.method=="POST":
+
+        form=AppointmentForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("service")
+        else:
+            print(form.errors)
+    else:
+        form=AppointmentForm()
+
+    return render(request,"appointment_Form.html",{"form":form})  
+
+def records_page(request):
+    return render(request,"records_page.html")                      
 
 
 # Create your views here.
